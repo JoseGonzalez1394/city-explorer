@@ -28,6 +28,8 @@ JSX used to code for REACT
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
 09-26-2022 0922 - App base created following along in class lecture.
+09-26-2022 1145 - Checklist 01 completed redid token to work on live site
+09-26-2022 
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
