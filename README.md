@@ -29,7 +29,7 @@ JSX used to code for REACT
 
 09-26-2022 0922 - App base created following along in class lecture.
 09-26-2022 1145 - Checklist 01 completed redid token to work on live site
-09-26-2022 
+09-26-2022 1200 - Checklist 02 completed bootstrap added and added style to form and data response 
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
