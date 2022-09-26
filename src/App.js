@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import 'bootstrap/dist/css/bootstrap.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -34,19 +35,19 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <input onChange={this.handleInput} placeholder="search for a city"></input>
-        <button onClick={this.handleSearch}>Explore!</button>
+        <input class = "p-3 mb-2 bg-secondary text-white" onChange={this.handleInput} placeholder="search for a city"></input>
+        <button class = "p-3 mb-2 bg-success text-white" onClick={this.handleSearch}>Explore!</button>
         {
           this.state.location.place_id &&
           <>
-            <h2>The City is: {this.state.location.display_name}</h2>
-            <h2>The lat is: {this.state.location.lat}</h2>
-            <h2>The lon is: {this.state.location.lon}</h2>
+            <h2 class="p-3 mb-2 bg-primary text-white">The City is: {this.state.location.display_name}</h2>
+            <h2 class="p-3 mb-2 bg-primary text-white">The lat is: {this.state.location.lat}</h2>
+            <h2 class="p-3 mb-2 bg-primary text-white">The lon is: {this.state.location.lon}</h2>
           </>
         }
         {this.state.error && 
         <>
-        <h2>Oh no! This City doesn't exist: {this.state.errorMessage}</h2>
+        <h2 class="p-3 mb-2 bg-danger text-white">Oh no! This City doesn't exist: {this.state.errorMessage}</h2>
         </>
         }
       </>
