@@ -7,10 +7,10 @@
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 Extremely watered down version of google maps with local data imported from locationIQ library for user 
 
-![city-explorer lab06](src/city-explorer lab06.png)
+![city-explorer lab06](./city-explorer-lab06.png)
 
 city explorer image breakdown ("https://josegonzalez799970.invisionapp.com/freehand/City-Explorer-CP2VdUDMN")
-## Getting Started
+image.png## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 create REACT APP 
 import axios 
