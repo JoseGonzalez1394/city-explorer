@@ -6,10 +6,10 @@ class App extends React.Component {
     super(props);
     this.state = {
       searchQuery: '',
-      location: {},
+      location: "",
       error: false,
       errorMessage: '',
-      lat: "", 
+      lat: "",
       lon: "",
     };
   }
@@ -40,24 +40,30 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <input className="p-3 mb-2 bg-secondary text-white" onChange={this.handleInput} placeholder="search for a city"></input>
-        <button className="p-3 mb-2 bg-success text-white" onClick={this.handleSearch}>Explore!</button>
-        {
-          this.state.location.place_id &&
+      <h1 className= "fw-bold text-center position-relative align-middle d-flex flex-column mx-5 my-3"> City-Explorer!🌆</h1>
+      <div className="height: 25px; background-color: rgba(255,0,0,0.1);border border-info rounded my-2 mx-3 text-center mx-auto 200 text-center w-25 d-flex flex-row ">
+          <input className="p-3 mb-2 bg-secondary text-white border border-info rounded my-5 mx-3 text-center mx-auto 200" onChange={this.handleInput} placeholder="search for a city"></input>
+          <button className="p-3 mb-2 bg-success text-white border border-info rounded my-5 text-center mx-auto 200" onClick={this.handleSearch}>Search! 🔎 </button>
+          </div>
+        {this.state.location &&
           <>
-            <h2 className="p-3 mb-2 bg-primary text-white">The City is: {this.state.location}</h2>
-            <h2 className="p-3 mb-2 bg-primary text-white">The lat is: {this.state.lat}</h2>
-            <h2 className="p-3 mb-2 bg-primary text-white">The lon is: {this.state.lon}</h2>
+            <h2 className="p-3 mb-2 bg-primary text-white border border-info rounded d-flex flex-column mx-3 text-center w-50 p-3 mx-auto 200">The City is: {this.state.location}</h2>
+            <h2 className="p-3 mb-2 bg-primary text-white border border-info rounded d-flex flex-column mx-3 text-center w-50 p-3 mx-auto 200">The lat is: {this.state.lat}</h2>
+            <h2 className="p-3 mb-2 bg-primary text-white border border-info rounded d-flex flex-column mx-3 text-center w-50 p-3 mx-auto 200">The lon is: {this.state.lon}</h2>
           </>
         }
         {this.state.error &&
           <>
-            <h2 class="p-3 mb-2 bg-danger text-white">Oh no! This City doesn't exist: {this.state.errorMessage}</h2>
+            <h2 class="p-3 mb-2 bg-danger text-white border border-info rounded d-flex flex-column mx-3 text-center w-50 mx-auto 200">Oh no! This City doesn't exist: {this.state.errorMessage}</h2>
           </>
         }
         {this.state.lat &&
-        <img src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_IQ_KEY}&center=${this.state.lat},${this.state.lon}&zoom=13`} alt="Map of City"></img>
-      }
+          <img className="border border-info rounded  d-flex flex-column mx-auto 200" src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_IQ_KEY}&center=${this.state.lat},${this.state.lon}&zoom=13`} alt="Map of City"></img>
+        }
+        <footer className="fw-bold text-center position-relative align-middle d-flex flex-column mx-5">
+          <p> &copy; EmoBurritto <a href="https://github.com/JoseGonzalez1394"> Hit the Link: Github </a>
+            <a href="https://www.linkedin.com/in/jose-armando-gonzalez/"> Hit the Link: Linkedin </a> </p>
+        </footer>
       </>
     );
   };
