@@ -32,6 +32,7 @@ JSX used to code for REACT
 09-26-2022 1200 - Checklist 02 completed bootstrap added and added style to 
 form and data response 
 09-26-2022 1324 - Checklist03 completed 
+09-26-2022 1433 - lab completed with css done 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
