@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Weather from "./Weather";
 import 'bootstrap/dist/css/bootstrap.css';
 class App extends React.Component {
   constructor(props) {
@@ -57,6 +58,7 @@ class App extends React.Component {
             <h2 class="p-3 mb-2 bg-danger text-white border border-info rounded d-flex flex-column mx-3 text-center w-50 mx-auto 200">Oh no! This City doesn't exist: {this.state.errorMessage}</h2>
           </>
         }
+        <Weather/>
         {this.state.lat &&
           <img className="border border-info rounded  d-flex flex-column mx-auto 200" src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_IQ_KEY}&center=${this.state.lat},${this.state.lon}&zoom=13`} alt="Map of City"></img>
         }
