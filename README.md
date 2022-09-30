@@ -8,6 +8,10 @@
 Extremely watered down version of google maps with local data imported from locationIQ library for user 
 
 ![city-explorer lab06](./city-explorer-lab06.png)
+![city-explorer-api lab07](./img/301-lab07.png)
+![city-explorer-api lab08](./img/301-lab08.png)
+
+city explorer image breakdown ("https://josegonzalez799970.invisionapp.com/freehand/City-Explorer-CP2VdUDMN")
 
 city explorer image breakdown ("https://josegonzalez799970.invisionapp.com/freehand/City-Explorer-CP2VdUDMN")
 image.png## Getting Started
