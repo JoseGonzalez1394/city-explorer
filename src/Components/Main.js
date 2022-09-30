@@ -5,7 +5,6 @@ import CityForm from "../Components/CityForm";
 import Weather from '../Components/Weather';
 import Movies from "./Movies";
 
-
 class Main extends React.Component {
 
   constructor(props) {
@@ -57,7 +56,7 @@ class Main extends React.Component {
   }
   handleWeather = async (lat, lon) => {
     try {
-      const API = `http://localhost:3001/weather?searchQuery=${this.state.searchQuery}&lat=${lat}&lon=${lon}`;
+      const API = `${process.env.REACT_APP_SERVER}/weather?searchQuery=${this.state.searchQuery}&lat=${lat}&lon=${lon}`;
       console.log(API);
       console.log(this.state.lat);
       const weatherRes = await axios.get(API);
@@ -76,7 +75,7 @@ class Main extends React.Component {
   }
   handleMovies = async () => {
     try {
-      const API = `http://localhost:3001/movies?searchQuery=${this.state.searchQuery}`;
+      const API = `${process.env.REACT_APP_SERVER}/movies?searchQuery=${this.state.searchQuery}`;
       const movieRes = await axios.get(API);
       this.setState({
         movieData: movieRes.data,
