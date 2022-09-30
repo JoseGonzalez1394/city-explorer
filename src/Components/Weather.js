@@ -9,15 +9,15 @@ class Weather extends React.Component {
     return (
       <>
         {this.props.displayWeather &&
-          <Container className= "p-3 mb-2 bg-info text-black border border-info rounded  mx-3 text-center w-50 p-3 mx-auto 200 w-50">
+          <Container className="p-3 mb-2 bg-info text-black border border-info rounded  mx-3 text-center w-50 p-3 mx-auto 200 w-50">
             <h3> Weather Forecast☁️</h3>
             <div>
-              {this.props.weatherData.map((event, index) => {
+              {this.props.weatherData.map((weather, index) => {
                 return (
-                  <>
-                    <p key={index}>Date: {event.date}</p>
-                    <p>Forecast: {event.description}</p>
-                  </>
+                  <div key={index}>
+                    <p>Date: {weather.date}</p>
+                    <p>Forecast: {weather.description}</p>
+                  </div>
                 )
               })}
             </div>

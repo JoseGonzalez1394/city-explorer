@@ -25,7 +25,7 @@ class CityCard extends React.Component {
         }
     {this.props.error &&
       <Container>
-        <Alert variant="danger" class="p-3 mb-2 bg-danger text-white border border-info rounded flex-column mx-3 text-center w-50 mx-auto 200">
+        <Alert variant="danger" className="p-3 mb-2 bg-danger text-white border border-info rounded flex-column mx-3 text-center w-50 mx-auto 200">
           <Alert.Heading>
             <>
               <h5>Sorry! 😔 : {this.props.errorMessage}</h5>
