@@ -7,9 +7,10 @@
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 Extremely watered down version of google maps with local data imported from locationIQ library for user 
 
-![city-explorer lab06](./city-explorer-lab06.png)
+![city-explorer lab06](./img/city-explorer-lab06.png)
 ![city-explorer-api lab07](./img/301-lab07.png)
 ![city-explorer-api lab08](./img/301-lab08.png)
+![city-explorer-api lab10](./img/301-lab10.png)
 
 city explorer image breakdown ("https://josegonzalez799970.invisionapp.com/freehand/City-Explorer-CP2VdUDMN")
 
