@@ -36,7 +36,6 @@ class Main extends React.Component {
     try {
       const API = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_IQ_KEY}&q=${this.state.searchQuery}&format=json`
       const res = await axios.get(API);
-      console.log(res.data);
       this.setState({ location: res.data[0].display_name });
       this.setState({ lat: res.data[0].lat });
       this.setState({ lon: res.data[0].lon });
@@ -51,7 +50,6 @@ class Main extends React.Component {
       this.setState({ error: true });
       this.setState({ errorMessage: error.response.status + error.message + "" });
       this.setState({ displayCard: false, });
-      this.handleWeather();
     }
   }
   handleWeather = async (lat, lon) => {
@@ -76,7 +74,9 @@ class Main extends React.Component {
   handleMovies = async () => {
     try {
       const API = `${process.env.REACT_APP_SERVER}/movies?searchQuery=${this.state.searchQuery}`;
+      console.log(API);
       const movieRes = await axios.get(API);
+      
       this.setState({
         movieData: movieRes.data,
         displayMovies: true,

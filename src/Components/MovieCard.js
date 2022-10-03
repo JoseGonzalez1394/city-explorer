@@ -7,7 +7,7 @@ class MovieCard extends React.Component{
 			<Card style={{width: '18rem'}}>
 				<Card.Body>
 					<Card.Text>
-					{this.props.movieData}
+					{this.props.title}
 					</Card.Text>
 				</Card.Body>
 			</Card>
